@@ -1,0 +1,7 @@
+---
+# handlers file for mate-desktop
+
+- name: clean yum cache
+  command: yum -y clean all
+  when: ansible_pkg_mgr == 'yum'
+  sudo: true

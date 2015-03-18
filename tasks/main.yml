@@ -1,0 +1,8 @@
+---
+# tasks file for mate-desktop
+
+- yum: name="@mate-desktop" state=latest
+  when: ansible_pkg_mgr == 'yum'
+  sudo: true
+  notify: clean yum cache
+
